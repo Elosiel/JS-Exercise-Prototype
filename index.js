@@ -39,9 +39,16 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-
+function Person(name, age) {
+  this.name = name;
+  this.isFlying = false;
 }
+Person.prototype.takeOff = function () {
+  this.stomach = true;
+};
+Person.prototype.land = function () {
+  this.stomach = false;
+};
 
 /*
   TASK 2
@@ -93,3 +100,22 @@ if (typeof exports !== 'undefined') {
   if (Car) { module.exports.Car = Car }
   if (Baby) { module.exports.Baby = Baby }
 }
+
+
+
+
+function print ()
+{
+  console.log (this.name)
+}
+
+let object =
+{
+  name: 'mike
+  speak: function ()
+  {
+    console.log(`$(this.name) says 'HI'`);
+  }
+}
+
+
